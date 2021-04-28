@@ -5,6 +5,7 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    scroll-behavior: smooth;
 }
 
 .navbar{
@@ -20,10 +21,81 @@ z-index: 1;
 }
 .navbar-brand
 img{
-    max-height: 50px;
+    max-height: 80px;
 }
 
-  
+.hero{
+    margin-top: 150px;
+    margin-bottom: 30px;
+    background-image: url('./img/headerbackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero .content{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .content .text h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 1.3em;
+    text-shadow: 0.08em 0.08em 0.08em rgb(0 0 0 / 40%);
+    text-align: center;
+}
+
+.hero .content .text h4{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+    line-height: 1em;
+    text-shadow: 0.08em 0.08em 0.08em rgb(0 0 0 / 40%);
+    text-align: center;
+}
+
+.hero .content .buttons{
+    display: flex;
+    margin-top: 15px;
+}
+
+.hero .content .buttons .menu-button{
+    color: #ffffff;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    margin: 0 10px;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.25s ease-in-out;    
+}
+
+.hero .content .buttons .menu-button:hover{
+    color: white;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: 2px solid #c39d63;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    text-decoration: none;
+    background-color: #c39d63;
+}
+
 
 
 #header-wrapper{
@@ -184,11 +256,10 @@ a:hover{
 .categorie1{
    
     background-color: #1f1f1f;
-    margin-right:50px;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-  
+    margin-top: 20px;
 
 }
 
@@ -232,16 +303,99 @@ a:hover{
     font-size: 25px;
 }
 
+.program{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright a{
+    color: white;
+}
+
+.google-map iframe{
+    display: flex;
+}
+
+.localizare{
+    margin-top: 20px;
+    padding-top: 10px;
+    
+}
+
 
 /* Media queries */
 
 
 /* tablets */
 @media screen and (max-width: 768px){
+    #despre .box .box1{
+        padding-top: 0;
+    }
+
     .box2 img{
         margin-top:170px;
         width: 100%;
     }
+    .racoritoare h4{
+        font-size: 14px;
+        text-align: center;
+    }
+    .categorie1{
+        margin: 30px!important;
+    }
+
+    .localizare h2{
+        padding: 30px 0 !important;
+    }
+    
+    .localizare{
+        display: none!important;
+    }
+    .last-box{
+
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+    display: flex;
+    justify-content: center;
+    }
+
+    .hero{
+        height: 650px;
+    }
+    .hero .content{
+        height: 100%;
+    }
+    .hero .content .text h2{
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 28px;
+        color: #ffffff;
+        letter-spacing: 1px;
+        line-height: 1em;
+        text-shadow: 0.08em 0.08em 0.08em rgb(0 0 0 / 40%);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .hero .content .text h4{
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: #ffffff;
+        letter-spacing: 1px;
+        line-height: 0.8em;
+        text-shadow: 0.08em 0.08em 0.08em rgb(0 0 0 / 40%);
+        text-align: center;
+    }
+
+    .hero .content .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero .content .buttons .first-btn{
+        margin-bottom: 10px;
+    }
+
 }
 
 
@@ -307,6 +461,10 @@ a:hover{
     .racoritoare p{
         margin-bottom: 5px;
     }
+
+    .racoritoare h4{
+        text-align: center;
+    }
     
     .categorie1{
         margin-right: 0px;
@@ -316,12 +474,6 @@ a:hover{
         margin-top:10px;
     }
 
-
-}
-
-
-@media screen and (max-width: 480px){
-
     .header{
         margin-left: -15rem;
     }
@@ -330,4 +482,10 @@ a:hover{
         font-size: 13px;
         
     }
-}
+
+
+    }
+
+
+
+
